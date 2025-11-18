@@ -161,6 +161,127 @@ const Index = () => {
         </div>
       </section>
 
+      <section id="examples" className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-16 h-16 bg-[#E30611] rounded-2xl flex items-center justify-center">
+                <Icon name="Mic2" size={32} className="text-white" />
+              </div>
+              <h2 className="text-5xl font-bold text-black">Примеры рубрик</h2>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                { 
+                  icon: "Newspaper", 
+                  title: "Утренний брифинг", 
+                  time: "09:00",
+                  desc: "Важные новости компании, анонсы акций, достижения команд"
+                },
+                { 
+                  icon: "Users", 
+                  title: "Голоса МТС", 
+                  time: "13:00",
+                  desc: "Интервью с сотрудниками о буднях, успехах и лайфхаках"
+                },
+                { 
+                  icon: "Lightbulb", 
+                  title: "Продуктовая пятиминутка", 
+                  time: "15:00",
+                  desc: "Обзоры новых продуктов, тарифов и технологий МТС"
+                },
+                { 
+                  icon: "Music", 
+                  title: "Музыкальный час", 
+                  time: "17:00",
+                  desc: "Подборки треков под настроение дня и пожелания сотрудников"
+                },
+                { 
+                  icon: "Award", 
+                  title: "Герои недели", 
+                  time: "Пятница",
+                  desc: "Награждение лучших сотрудников, истории успеха"
+                },
+                { 
+                  icon: "BookOpen", 
+                  title: "Обучающий подкаст", 
+                  time: "Ежедневно",
+                  desc: "Короткие уроки по продуктам, продажам и сервису"
+                }
+              ].map((item, idx) => (
+                <Card key={idx} className="p-6 bg-gradient-to-br from-gray-50 to-white hover:shadow-xl transition-all hover:-translate-y-2 border-l-4 border-[#E30611]">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-[#E30611] rounded-xl flex items-center justify-center">
+                      <Icon name={item.icon} size={24} className="text-white" />
+                    </div>
+                    <span className="text-sm font-semibold text-[#E30611] bg-red-50 px-3 py-1 rounded-full">
+                      {item.time}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-black mb-2">{item.title}</h3>
+                  <p className="text-gray-600">{item.desc}</p>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="stats" className="py-20 bg-gradient-to-br from-gray-900 to-black text-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl font-bold mb-4">Эффективность корпоративного радио</h2>
+              <p className="text-xl text-gray-300">По данным исследований западных компаний</p>
+            </div>
+            <div className="grid md:grid-cols-4 gap-8">
+              {[
+                { 
+                  icon: "TrendingUp", 
+                  value: "+35%", 
+                  label: "Рост вовлечённости сотрудников"
+                },
+                { 
+                  icon: "Users", 
+                  value: "87%", 
+                  label: "Сотрудников слушают регулярно"
+                },
+                { 
+                  icon: "Clock", 
+                  value: "-40%", 
+                  label: "Время на рассылку информации"
+                },
+                { 
+                  icon: "Heart", 
+                  value: "+52%", 
+                  label: "Улучшение атмосферы в офисах"
+                }
+              ].map((stat, idx) => (
+                <Card key={idx} className="p-8 bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] border-[#E30611] border-2 hover:scale-105 transition-transform text-center">
+                  <div className="w-16 h-16 bg-[#E30611] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Icon name={stat.icon} size={32} className="text-white" />
+                  </div>
+                  <div className="text-5xl font-bold text-[#E30611] mb-2">{stat.value}</div>
+                  <p className="text-gray-300 text-lg">{stat.label}</p>
+                </Card>
+              ))}
+            </div>
+            <div className="mt-16 p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
+              <div className="flex items-start gap-4">
+                <Icon name="Info" size={24} className="text-[#E30611] flex-shrink-0 mt-1" />
+                <div>
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    Корпоративное радио повышает скорость распространения информации, 
+                    укрепляет командный дух и создаёт единое информационное пространство. 
+                    Сотрудники чувствуют себя частью большой команды, клиенты — в комфортной атмосфере.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="benefits" className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
